@@ -1,21 +1,16 @@
-import { NavLink } from 'react-router-dom';
+import HeaderComponent from "../components/HeaderComponent"
 
-export default function HeaderComponent() {
-  return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <NavLink className="navbar-brand" to="/">SeriesApp</NavLink>
-        <div className="collapse navbar-collapse">
-          <ul className="navbar-nav me-auto">
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/series">Series</NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/categories">Categorías</NavLink>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  );
+function HomePage(){
+      return (
+        <>
+            <HeaderComponent />
+            <div className="container mt-3">
+                <div className="border-bottom pb-3 mb-3">
+                    <h3>Home</h3>
+                </div>
+            </div>
+        </>
+      )
 }
+
+export default HomePage
