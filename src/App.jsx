@@ -1,6 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
+import CategoryPage from "./pages/CategoryPage";
+import SeriePage from "./pages/SeriePage";
+
 
 function App() {
   return (
@@ -8,6 +11,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/home" element={<HomePage />} />
+        <Route path="/category" element={<CategoryPage />} />
+        <Route path="/serie" element={<SeriePage />} />
         
       </Routes>
     </BrowserRouter>
