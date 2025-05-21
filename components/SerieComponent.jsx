@@ -1,3 +1,6 @@
+import { useNavigate } from "react-router-dom";
+
+
 function SerieComponent(props) {
     return (
         <div className="card">
