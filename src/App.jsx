@@ -3,6 +3,7 @@ import LoginPage from "./pages/LoginPage";
 import HomePage from "./pages/HomePage";
 import CategoryPage from "./pages/CategoryPage";
 import SeriePage from "./pages/SeriePage";
+import SerieFormPage from "./pages/SerieFormPage";
 
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Route path="/home" element={<HomePage />} />
         <Route path="/category" element={<CategoryPage />} />
         <Route path="/serie" element={<SeriePage />} />
+        <Route path="/serie/edit/:idserie" element={<SerieFormPage />} />
         
       </Routes>
     </BrowserRouter>

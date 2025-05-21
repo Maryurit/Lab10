@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 
-
 function SerieComponent(props) {
     const navigate = useNavigate();
 

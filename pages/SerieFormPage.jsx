@@ -1,7 +1,31 @@
+import { useEffect } from "react";
+import { useParams } from "react-router-dom";
 import HeaderComponent from "../components/HeaderComponent"
 
 
 function SerieFormPage(){
+    const series = [
+        { cod: 1, nom: "Friends", cat: "Comedy", img: "friends.png" },
+        { cod: 2, nom: "Law & Order", cat: "Drama", img: "law-and-order.png" },
+        { cod: 3, nom: "The Big Bang Theory", cat: "Comedy", img: "the-big-bang-theory.png" },
+        { cod: 4, nom: "Stranger Things", cat: "Terror", img: "stranger-things.png" },
+        { cod: 5, nom: "Dr. House", cat: "Drama", img: "dr-house.png" },
+        { cod: 6, nom: "The X-Files", cat: "Drama", img: "the-x-files.png" }
+    ];
+    const { idserie } = useParams();
+    const setDataForm = (codigo) => {
+        for (const item of series) {
+            if (item.cod === codigo) {
+                document.getElementById("inputName").value = item.nom;
+                document.getElementById("inputCategory").value = item.cat;
+                document.getElementById("fileImg").src = "https://dummyimage.com/400x250/000/fff&text="+item.img;
+                break;
+            }
+        }
+    }
+    useEffect(() => {
+        setDataForm(idserie)
+    }, []);
     return (
         <>
             <HeaderComponent />
