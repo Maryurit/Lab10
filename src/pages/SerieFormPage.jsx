@@ -15,7 +15,7 @@ function SerieFormPage(){
     const { idserie } = useParams();
     const setDataForm = (codigo) => {
         for (const item of series) {
-            if (item.cod === codigo) {
+            if (item.cod == codigo) {
                 document.getElementById("inputName").value = item.nom;
                 document.getElementById("inputCategory").value = item.cat;
                 document.getElementById("fileImg").src = "https://dummyimage.com/400x250/000/fff&text="+item.img;
@@ -24,7 +24,7 @@ function SerieFormPage(){
         }
     }
     useEffect(() => {
-        setDataForm(idserie)
+        setDataForm(idserie);
     }, []);
     return (
         <>

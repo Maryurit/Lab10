@@ -12,9 +12,9 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/home" element={<HomePage />} />
-        <Route path="/category" element={<CategoryPage />} />
-        <Route path="/serie" element={<SeriePage />} />
-        <Route path="/serie/edit/:idserie" element={<SerieFormPage />} />
+        <Route path="/categories" element={<CategoryPage />} />
+        <Route path="/series" element={<SeriePage />} />
+        <Route path="/series/edit/:idserie" element={<SerieFormPage />} />
         
       </Routes>
     </BrowserRouter>
