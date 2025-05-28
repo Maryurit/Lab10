@@ -40,8 +40,13 @@ function SerieFormPage(){
     const setDataForm = (codigo) => {
         for (const item of series) {
             if (item.cod == codigo) {
-                document.getElementById("inputName").value = item.nom;
-                document.getElementById("inputCategory").value = item.cat;
+                const nData = {
+                    cod: item.cod,
+                    nom: item.nom,
+                    cat: item.cat,
+                    img: ''
+                }
+                setData(nData);
                 document.getElementById("fileImg").src = "https://dummyimage.com/400x250/000/fff&text="+item.img;
                 break;
             }
