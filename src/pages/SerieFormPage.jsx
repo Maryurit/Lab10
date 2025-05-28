@@ -1,8 +1,12 @@
-import { useEffect } from "react";
+import { useEffect, useState} from "react";
 import { useParams } from "react-router-dom";
 import HeaderComponent from "../components/HeaderComponent"
 
-
+const initData = {
+    cod: '',
+    nom: '', 
+    cat: '',
+}
 function SerieFormPage(){
     const series = [
         { cod: 1, nom: "Friends", cat: "Comedy", img: "friends.png" },
@@ -13,6 +17,7 @@ function SerieFormPage(){
         { cod: 6, nom: "The X-Files", cat: "Drama", img: "the-x-files.png" }
     ];
     const { idserie } = useParams();
+    const [data, setData] = useState(initData);
     const setDataForm = (codigo) => {
         for (const item of series) {
             if (item.cod == codigo) {
